@@ -1,0 +1,8 @@
+POST http://localhost:3001/juegos
+Content-Type: application/json
+
+{
+    "nombre_juego" : "League of Legends",
+    "tematica" : "MOBA",
+    "imagen" : "imagen"
+}

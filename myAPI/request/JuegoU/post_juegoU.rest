@@ -1,0 +1,9 @@
+POST http://localhost:3001/juegosUsers
+Content-Type: application/json
+
+{
+    "id_usuario" : 2,
+    "id_juego" : 1,
+    "clasificacion_usuario": "Oro",
+    "rol_de_juego" : "Ad Carry"
+}

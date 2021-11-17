@@ -1,0 +1,7 @@
+POST http://localhost:3001/comentarios
+Content-Type: application/json
+
+{
+    "id_usuario" : 2,
+    "fecha" : "2021-11-10T18:54:44.000Z"
+}

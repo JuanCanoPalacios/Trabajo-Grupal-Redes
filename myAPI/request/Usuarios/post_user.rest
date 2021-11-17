@@ -1,0 +1,17 @@
+POST http://localhost:3001/users
+Content-type: application/json
+
+{
+    "nombre_usuario" : "Mateo",
+    "apellido_usuario" : "Ferreyra",
+    "apodo" : "Fede",
+    "contraseña" : "soyfede",
+    "dni": 2263749,
+    "pais" : "Argentina",
+    "localidad" : "Capital Federal",
+    "telefono" : 1134567890,
+    "email" : "fede@gmail.com",
+    "id_empresa" : 1,
+    "descripcion" : "hola123",
+    "imagen" : "imagen"
+}

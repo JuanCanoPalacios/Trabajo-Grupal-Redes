@@ -1,0 +1,6 @@
+PUT http://localhost:3001/juegosUsers/1
+Content-Type: application/json
+
+{
+    
+}

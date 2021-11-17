@@ -1,0 +1,9 @@
+
+POST http://localhost:3001/empresa
+Content-type: application/json
+
+{
+    "nombre_empresa" : "Facebook",
+    "descripcion" : "Facebook inc",
+    "imagen" : "imagen"
+}
