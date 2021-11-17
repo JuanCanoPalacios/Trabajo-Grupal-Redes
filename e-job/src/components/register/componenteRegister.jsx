@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import './style.css'
 import axios from 'axios'
 
@@ -67,38 +68,40 @@ const ComponenteRegister = () => {
     }
 
     return (
-    <div className = "div">
-        <h1 className = "h1">Formulario de registro</h1> 
-        <form className = "form" onSubmit={handleSubmit} >
-          <label className = "label" for="nombre">Nombre</label>
-          <br />
-          <input className = "input" name="nombre_usuario" type="text" onChange={handleChange} value={todo.nombre_usuario} required />
-          <br />
-          <br />
-          <label className = "label" for="apelido">Apellido</label>
-          <br />
-          <input className = "input" name="apellido_usuario" type="text"  onChange={handleChange} value={todo.apellido_usuario} required /> 
-          <br />
-          <br />
-          <label className = "label" for="correo">Correo electronico</label>
-          <br />
-          <input className = "input" name="email" type="email"  onChange={handleChange} value={todo.email} required />
-          <br />
-          <br />
-          <label className = "label" for="nacimiento">Fecha de nacimiento</label>
-          <br />
-          <input className = "input" name="nacimiento" type="date"  onChange={handleChange}  value={todo.nacimiento} required />
-          <br />
-          <br />
-          <label className = "label" for="contraseña">Contraseña</label>
-          <br />
-          <input className = "input" name="contraseña" type="password"  onChange={handleChange}  value={todo.contraseña}  required />
-          <br />
-          <br />
-          <br />
-          <button className="button" type='submit'>Registrarse</button>
-        </form>
-    </div>
+        <div className="contenedor_principal">
+            <div className = "div">
+                <h1 className = "h1">Formulario de registro</h1> 
+                <form className = "form" onSubmit={handleSubmit} >
+                    <label className = "label" for="nombre">Nombre</label>
+                    <br />
+                    <input className = "input" name="nombre_usuario" type="text" onChange={handleChange} value={todo.nombre_usuario} required />
+                    <br />
+                    <br />
+                    <label className = "label" for="apelido">Apellido</label>
+                    <br />
+                    <input className = "input" name="apellido_usuario" type="text"  onChange={handleChange} value={todo.apellido_usuario} required /> 
+                    <br />
+                    <br />
+                    <label className = "label" for="correo">Correo electronico</label>
+                    <br />
+                    <input className = "input" name="email" type="email"  onChange={handleChange} value={todo.email} required />
+                    <br />
+                    <br />
+                    <label className = "label" for="nacimiento">Fecha de nacimiento</label>
+                    <br />
+                    <input className = "input" name="nacimiento" type="date"  onChange={handleChange}  value={todo.nacimiento} required />
+                    <br />
+                    <br />
+                    <label className = "label" for="contraseña">Contraseña</label>
+                    <br />
+                    <input className = "input" name="contraseña" type="password"  onChange={handleChange}  value={todo.contraseña}  required />
+                    <br />
+                    <br />
+                    <br />
+                    <Link to='/'  className="button" type='submit'>Registrarse</Link>
+                </form>
+            </div>
+        </div>
     )
 }
 

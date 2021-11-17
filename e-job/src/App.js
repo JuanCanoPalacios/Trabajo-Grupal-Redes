@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import Componente_login from './components/login/componente_login'; //importar componente.
-import Componente_register from './components/register/componente_register';
-import ComponenteRegister from './components/register/componenteRegister';
-import Componente_registrado from './components/registrado/componente_registrado';
-import './App.css'
+// import Componente_login from './components/login/componente_login'; //importar componente.
+// import Componente_register from './components/register/componente_register';
+// import ComponenteRegister from './components/register/componenteRegister';
+// import Componente_registrado from './components/registrado/componente_registrado';
+import Register from './components/register/Register';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -20,9 +20,9 @@ render(){
         <BrowserRouter>
             <Fragment>
                 <Routes>
-                    <Route path='/login' element={<Componente_login />}></Route>
-                    <Route path='/register' element={<ComponenteRegister />}></Route>
-                    <Route exact path='/' element={<Componente_registrado />}></Route>
+                    {/* <Route path='/login' element={<Componente_login />}></Route> */}
+                    <Route path='/register' element={<Register />}></Route>
+                    {/* <Route exact path='/' element={<Componente_registrado />}></Route> */}
                 </Routes>
             </Fragment>
         </BrowserRouter>
