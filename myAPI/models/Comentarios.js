@@ -5,9 +5,12 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true,
             autoIncrement: true
         },
-        id_usuario: {
-                type: Sequelize.INTEGER
-        },
+        // id_usuario: {
+        //     //     type: Sequelize.INTEGER,
+        //     //     references: 'usuarios',
+        //     //     referencesKey: 'id_usuario'
+        //     // 
+        // },
         fecha: {
             type: Sequelize.DATE
         }

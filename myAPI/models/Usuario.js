@@ -4,7 +4,7 @@ const table = 'usuario'
 
 module.exports = (sequelize, Sequelize) => {
 
-    const usuario = sequelize.define('usuario', {
+    const usuario = sequelize.define(table, {
         id_usuario: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -37,9 +37,11 @@ module.exports = (sequelize, Sequelize) => {
         email: {
             type: Sequelize.STRING
         },
-        id_empresa: {
-            type: Sequelize.INTEGER,
-        },
+        // id_empresa: {
+        //     type: Sequelize.INTEGER,
+        //     references: 'empresa',
+        //     referencesKey: 'id_empresa'
+        // },
         descripcion: {
             type: Sequelize.STRING
         },
@@ -49,5 +51,6 @@ module.exports = (sequelize, Sequelize) => {
 
 
     })
+    // usuario.hasMany(Empresa)
     return usuario;
 };

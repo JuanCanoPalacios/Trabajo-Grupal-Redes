@@ -1,0 +1,16 @@
+POST http://localhost:3001/users
+Content-type: application/json
+
+{
+    "nombre_usuario" : "Franco",
+    "apellido_usuario" : "Carabajal",
+    "apodo" : "Franquito",
+    "contraseña" : "soyfranco",
+    "dni": 2263749,
+    "pais" : "Argentina",
+    "localidad" : "Capital Federal",
+    "telefono" : 1134567890,
+    "email" : "franco@gmail.com",
+    "descripcion" : "hola123",
+    "imagen" : "imagen"
+}
