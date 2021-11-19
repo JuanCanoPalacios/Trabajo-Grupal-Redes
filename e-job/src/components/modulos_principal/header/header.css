@@ -1,0 +1,99 @@
+:root{
+    --primario_oscuro: #0288D1;
+    --primario_claro: #03A9F4;
+    --texto_primario: #212121;
+    --texto_secundario: #757575;
+    --iconos: #FFFFFF;
+    --hoverr: #BDBDBD;
+}
+
+.contenedor_header{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: 'Black Ops One', cursive;
+}
+
+/* h2{
+    color: #FFFFFF;
+    font-size: 35px;
+} */
+
+.h1j{
+    font-size: 45px;
+}
+
+/* h4{
+    margin-top: 15px;
+    color: #FFFFFF;
+    font-weight: 300;
+} */
+
+/* p{
+    color: #FFFFFF;
+    font-weight: 300;
+} */
+
+
+.alinear_texto{
+    text-align: center;
+}
+
+/*Header*/
+
+.buscador{
+    padding: 9px 22px 9px 26px;
+    border-radius: 30px;
+    border: 2px solid var(--texto_secundario);
+}
+
+.ruedita{
+    color: var(--texto_primario);
+    font-size: 25px;
+}
+
+.ruedita:hover {
+    color:var(--hoverr);
+    transition: 0.3s;
+}
+
+.perfil{
+    text-decoration: none;
+    color: var(--texto_primario);
+}
+
+.perfil:hover {
+    color:var(--hoverr);
+    transition: 0.3s;
+}
+
+
+.imagen_header{
+    height: 50px;
+    width: 60px;
+}
+
+.elementos_header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedor_header{
+    background-color: var(--primario_oscuro);
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 15px 20px 10px 20px;
+    justify-content: space-between;
+}
+
+@media(min-width: 500px) { 
+    .contenedor_header{
+        display: flex;
+        flex-direction: row;
+    }
+}

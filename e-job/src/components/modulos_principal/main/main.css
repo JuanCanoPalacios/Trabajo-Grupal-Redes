@@ -1,0 +1,75 @@
+.imagen-principal{
+    background-image: url(./images/background.jpg);
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+}
+
+.semi_titulo{
+    margin: 50px 0;
+}
+
+.contenedor_main{
+    max-width: 1600px;
+    min-height: 92vh;
+    margin: 0 auto;
+}
+
+.contenedor_imagenes{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    gap: 5rem;
+    margin-bottom: 100px;
+}
+
+@media(min-width: 720px) {
+    .contenedor_imagenes{
+        grid-template-columns: auto auto;
+    }    
+} 
+
+@media(min-width: 1268px) {
+    .contenedor_imagenes{
+        grid-template-columns: auto auto auto auto;
+    }    
+} 
+
+.jugador{
+    width: 250px;
+    height: 250px;
+    background-color: var(--primario_oscuro); 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    border-radius: 10px;
+}
+
+img{
+    border-radius: 50%; 
+}
+
+
+.imagenes_juegos{
+    height: 250px;
+    width: 250px;
+}
+
+.imagenes_jugadores{
+    height: 160px;
+    width: 160px;
+}
+
+.juegos H3{
+    color:#FFFFFF;
+}
+
+.titulo_juego{
+    margin-top: 20px;
+    color: #FFFFFF;
+    font-size: 20px;
+}

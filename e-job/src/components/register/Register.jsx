@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import './style_register.css'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
@@ -6,53 +6,33 @@ import { useForm } from 'react-hook-form'
 const Register = () => {
 
     const {register, formState: { errors }, handleSubmit} = useForm()  /*  Funciones que se utilizan extraidas de react-hook-form  */
-                        
-
-    const [personas, setPersonas] = useState({     /* State que luego sera rellenado con los valores ingresados y posteado a la BD */
-        nombre_usuario: '',
-        apellido_usuario: '',
-        apodo: '',
-        dni: '',
-        pais: '',
-        localidad: '',
-        telefono: '',
-        email: '',
-        contraseña: '',
-        id_empresa: 1,
-        descripcion: '',
-        imagen: ''
-    })
-
-    const [dni, setDni] = useState(null)    /* State que recibira los dni y los emails existentes para una validacion. */
 
     let validate = true;
 
-    const onSubmit = (data, e) => {
+    const onSubmit = async (data, e) => {
 
-        axios.get('http://localhost:3001/users/dni&email')
+        let dniEmail;
+
+        await axios.get('http://localhost:3001/users/dni&email')        /* Peticion del dni e email de los usuarios en la base de datos */
         .then(res => {
-            const response = res.data.response[0].map(e => e)
-            setDni(response)    /* Se le asigna los dni y emails obtenidos a traves del get */ 
-            console.log(dni)
+            dniEmail = res.data.response[0]
+            console.log(dniEmail)
         })
-
-
-        dni.forEach(e => {
+        
+        dniEmail.forEach(e => {
             if (e.dni === data.dni || e.email === data.email) validate = false      /* Valida que el mail y dni ingresados por el usuario no existan ya en la BD */
         })
 
-        validate === true ? setPersonas(data) : alert("El DNI o Email ingresado ya esta existente dentro de nuestra base de datos.")  /* Muestra alerta en caso de que si existan en la BD */
-
-        
         if (validate){
-            axios.post('http://localhost:3001/users',{
-                ...personas,
+            axios.post('http://localhost:3001/users',{      /* Postea el usuario registrado a la base de datos */
+                ...data,
                 descripcion: 'asd',
                 imagen: 'asd',
                 id_empresa:1
             })
-            console.log(personas)
         }
+        else alert("El DNI o Email ingresado ya esta existente dentro de nuestra base de datos.")
+
 
         e.target.reset()
     } 

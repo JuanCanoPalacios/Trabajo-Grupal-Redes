@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-// import Componente_login from './components/login/componente_login'; //importar componente.
-// import Componente_register from './components/register/componente_register';
-// import ComponenteRegister from './components/register/componenteRegister';
-// import Componente_registrado from './components/registrado/componente_registrado';
 import Register from './components/register/Register';
+import Login from './components/login/Login';
+import Main from './components/modulos_principal/main/Principal';
+import Perfil from './components/modulos_perfil/perfil/Perfil';
+// import Componente_login from './components/login/componente_login'; //importar componente.
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -12,19 +12,24 @@ import {
 	Link,
 	BrowserRouter
   } from "react-router-dom";
+import StoreProvider from './store/StoreProvider';
 
 class App extends Component
 {
 render(){
 	return(
         <BrowserRouter>
-            <Fragment>
-                <Routes>
-                    {/* <Route path='/login' element={<Componente_login />}></Route> */}
-                    <Route path='/register' element={<Register />}></Route>
-                    {/* <Route exact path='/' element={<Componente_registrado />}></Route> */}
-                </Routes>
-            </Fragment>
+            <div>
+                <StoreProvider>
+                    <Routes>
+                        <Route exact path='/login' element={<Login />}></Route>
+                        <Route exact path='/register' element={<Register />}></Route>
+                        <Route path ='/main' element={<Main />}></Route>
+                        <Route path ='/perfil' element={<Perfil  />}></Route>
+                        {/* <Route exact path='/' element={<Componente_registrado />}></Route> */}
+                    </Routes>
+                </StoreProvider>
+            </div>
         </BrowserRouter>
 	      );
         }

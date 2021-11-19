@@ -1,0 +1,14 @@
+.jugador{
+    width: 250px;
+    height: 250px;
+    background-color: var(--primario_oscuro);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    border-radius: 10px;
+}
+
+img{
+    border-radius: 50%; 
+}
